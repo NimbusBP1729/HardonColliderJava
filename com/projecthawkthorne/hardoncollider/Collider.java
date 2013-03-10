@@ -9,6 +9,7 @@ import java.util.Iterator;
 import java.util.List;
 
 /**
+ * the collision detection class
  * 
  * @author Patrick
  */
@@ -115,10 +116,13 @@ public class Collider {
 	}
 
 	/**
+	 * returns true if the two objects collide
 	 * 
 	 * @param a
+	 *            a polygon
 	 * @param b
-	 * @return
+	 *            a rectangle
+	 * @return true if the two objects collide
 	 */
 	private static boolean intersects(Polygon a, Rectangle b) {
 		return Collider.intersects(b, a);
@@ -139,7 +143,7 @@ public class Collider {
 	 * 
 	 * @param s
 	 *            the bound to add
-	 * @return
+	 * @return true if the bounding box did not previously exist
 	 */
 	public boolean addBox(Bound s) {
 		if (shapeMap.contains(s)) {

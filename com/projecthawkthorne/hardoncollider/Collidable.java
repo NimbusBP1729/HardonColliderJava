@@ -3,6 +3,12 @@ package com.projecthawkthorne.hardoncollider;
 import java.util.HashSet;
 import java.util.Set;
 
+/**
+ * all objects that have an associated Bound should extend this class
+ * 
+ * @author Patrick
+ * 
+ */
 public abstract class Collidable {
 	/** list of the non-player nodes this node is touching */
 	protected Set<Collidable> collisionList = new HashSet<Collidable>();

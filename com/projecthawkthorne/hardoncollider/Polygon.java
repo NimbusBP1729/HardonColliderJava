@@ -1,5 +1,11 @@
 package com.projecthawkthorne.hardoncollider;
 
+/**
+ * an arbitrary polygonal bound
+ * 
+ * @author Patrick
+ * 
+ */
 class Polygon extends Bound {
 	java.awt.Polygon p;
 

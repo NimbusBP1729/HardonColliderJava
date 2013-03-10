@@ -5,6 +5,7 @@
 package com.projecthawkthorne.hardoncollider;
 
 /**
+ * an arbitrary rectangular bound
  * 
  * @author Patrick
  */

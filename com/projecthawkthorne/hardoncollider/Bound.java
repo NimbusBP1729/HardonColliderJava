@@ -1,5 +1,11 @@
 package com.projecthawkthorne.hardoncollider;
 
+/**
+ * a generic bounding region
+ * 
+ * @author Patrick
+ * 
+ */
 public abstract class Bound {
 	private Collidable node;
 
