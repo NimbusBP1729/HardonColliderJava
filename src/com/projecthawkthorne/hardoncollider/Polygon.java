@@ -18,10 +18,24 @@ class Polygon extends Bound {
 	 *            an array of the y coordinates of the polygon
 	 */
 	Polygon(int[] x, int[] y) {
+		if (x == null || y == null) {
+			throw new NullPointerException(
+					"Polygon requires non-null x and y coordinates");
+		} else if (x.length < 3) {
+			throw new IllegalArgumentException(
+					"Polygon requires at least 3 x values. Found " + x.length);
+		} else if (y.length < 3) {
+			throw new IllegalArgumentException(
+					"Polygon requires at least 3 y values. Found " + y.length);
+		} else if (x.length != y.length) {
+			throw new IllegalArgumentException(
+					"Polygon requires the same amount of x and y values. Found "
+							+ x.length + "," + y.length);
+
+		}
 		p = new java.awt.Polygon();
 		p.xpoints = x;
 		p.ypoints = y;
-		assert (p.xpoints.length == p.ypoints.length);
 		p.npoints = p.xpoints.length;
 
 	}
