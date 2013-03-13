@@ -6,6 +6,10 @@ A collision detection library for Java modeled off of core functionality in Matt
 Documentation can be found here:
 http://nimbusbp1729.github.com/HardonColliderJava/doc/
 
+I'm currently using this source code within a 2D multiplayer platformer I'm developing. 
+I'm more than open to pull requests, especially if they're related to making this code more efficient or supporting
+a greater variety of shapes.
+
 # Usage
 
 ## Creating a new polygonal bound
