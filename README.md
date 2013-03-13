@@ -6,6 +6,37 @@ A collision detection library for Java modeled off of core functionality in Matt
 Documentation can be found here:
 http://nimbusbp1729.github.com/HardonColliderJava/doc/
 
+# Usage
+
+## Creating a new polygonal bound
+    int[] x = {0,2,6,7,11};
+    int[] y = {0,-3,0,10,2};
+    Bound polyBound = Bound.create(x,y);
+    
+## Creating a new rectangular bound
+    int x = 0;
+    int y = 0;
+    int width = 10;
+    int height = 20;
+    Bound rectBound = Bound.create(x, y, width, height);
+    
+## Associating an obect to a bound
+    Collidable c = new SomeClass(); //SomeClass must implement Collidable
+    rectBound.setUserData(coll);
+
+Now `c` will have a list of the collidables it hit whenever a new collision happens!!
+
+This can be accessed by the following:
+    c.getCollisionList();
+
+## Callbacks
+
+when `c` is colliding with an object
+    c.collision(otherC);
+
+when `c` stops colliding with an object
+    c.collisionEnd(otherC);
+
 
 ###License
 
