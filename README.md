@@ -21,21 +21,24 @@ http://nimbusbp1729.github.com/HardonColliderJava/doc/
     Bound rectBound = Bound.create(x, y, width, height);
     
 ## Associating an obect to a bound
-    Collidable c = new SomeClass(); //SomeClass must implement Collidable
+    Collidable coll = new SomeClass(); //SomeClass must implement Collidable
     rectBound.setUserData(coll);
 
-Now `c` will have a list of the collidables it hit whenever a new collision happens!!
+Now `coll` will have a list of the collidables it hit whenever a new collision happens!!
 
 This can be accessed by the following:
-    c.getCollisionList();
+
+    coll.getCollisionList();
 
 ## Callbacks
 
-when `c` is colliding with an object
-    c.collision(otherC);
+when `coll` is colliding with an object
 
-when `c` stops colliding with an object
-    c.collisionEnd(otherC);
+    coll.collision(otherColl);
+
+when `coll` stops colliding with an object
+
+    coll.collisionEnd(otherColl);
 
 
 ###License
